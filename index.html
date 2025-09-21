@@ -4,10 +4,13 @@
   <meta charset="UTF-8">
   <title>Game .IO Online</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Liên kết file CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Thanh điều hướng -->
   <nav>
     <a href="#">Trang chủ</a>
     <a href="#">Game mới</a>
@@ -15,15 +18,18 @@
     <a href="#" onclick="login()">Đăng nhập</a>
   </nav>
 
+  <!-- Tiêu đề -->
   <header>
     <h1>🎮 Game .IO Online</h1>
     <p>Chơi game miễn phí, không cần tải!</p>
   </header>
 
+  <!-- Ô tìm kiếm -->
   <div class="search-bar">
     <input type="text" id="searchInput" placeholder="🔍 Tìm kiếm game..." onkeyup="searchGame()">
   </div>
 
+  <!-- Bộ lọc thể loại -->
   <div class="filter-bar">
     <button onclick="filterGame('all')">Tất cả</button>
     <button onclick="filterGame('action')">Hành động</button>
@@ -31,14 +37,17 @@
     <button onclick="filterGame('multiplayer')">Multiplayer</button>
   </div>
 
+  <!-- Danh sách game -->
   <div class="game-list" id="gameList">
     <!-- Game items sẽ được thêm bằng JavaScript -->
   </div>
 
+  <!-- Chân trang -->
   <footer>
     © 2025 GameIO.vn | Liên hệ: admin@gameio.vn
   </footer>
 
+  <!-- Liên kết file JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
