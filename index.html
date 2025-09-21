@@ -2,181 +2,43 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <title>Game .IO Online</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thế giới Minecraft của kazuti4n</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-image: url('https://wallpapercave.com/wp/wp2564232.png');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-    }
-
-    header, footer {
-      background-color: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav {
-      background-color: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: #ffcc00;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-shadow: 0 0 5px #fff;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 30px auto;
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    h2 {
-      color: #00ff00;
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      list-style: square;
-      padding-left: 20px;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    audio {
-      display: block;
-      margin: 20px auto;
-    }
-
-    .blog-entry {
-      margin-bottom: 20px;
-      padding: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-left: 4px solid #ffcc00;
-    }
-
-    .tip {
-      background-color: rgba(0, 255, 0, 0.1);
-      padding: 10px;
-      margin-top: 10px;
-      border-left: 4px solid #00ff00;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>🌍 Chào mừng đến với thế giới Minecraft của kazuti4n</h1>
-    <p>Game thủ, builder và nhà thám hiểm pixel</p>
-  </header>
-
   <nav>
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#kynang">Kỹ năng</a>
-    <a href="#duan">Dự án</a>
-    <a href="#skin">Skin</a>
-    <a href="#gallery">Ảnh</a>
-    <a href="#blog">Blog</a>
-    <a href="#tips">Mẹo</a>
-    <a href="#lienhe">Liên hệ</a>
+    <a href="#">Trang chủ</a>
+    <a href="#">Game mới</a>
+    <a href="#">Xếp hạng</a>
+    <a href="#" onclick="login()">Đăng nhập</a>
   </nav>
 
-  <section id="gioithieu">
-    <h2>Giới thiệu</h2>
-    <p>Tôi là kazuti4n, một người chơi Minecraft đam mê khám phá, xây dựng và sáng tạo. Từ những công trình nhỏ đến lâu đài bay, tôi luôn tìm cách biến ý tưởng thành thế giới pixel sống động.</p>
-  </section>
+  <header>
+    <h1>🎮 Game .IO Online</h1>
+    <p>Chơi game miễn phí, không cần tải!</p>
+  </header>
 
-  <section id="kynang">
-    <h2>Kỹ năng Minecraft</h2>
-    <ul>
-      <li>Redstone nâng cao & tự động hóa</li>
-      <li>Xây dựng kiến trúc sáng tạo</li>
-      <li>Sinh tồn Hardcore & PvP</li>
-      <li>Quản lý server Minecraft</li>
-    </ul>
-  </section>
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 Tìm kiếm game..." onkeyup="searchGame()">
+  </div>
 
-  <section id="duan">
-    <h2>Dự án nổi bật</h2>
-    <ul>
-      <li><strong>Lâu đài bay:</strong> Công trình sáng tạo trong chế độ Creative</li>
-      <li><strong>Server sinh tồn:</strong> Cộng đồng Minecraft Việt do tôi quản lý</li>
-    </ul>
-  </section>
+  <div class="filter-bar">
+    <button onclick="filterGame('all')">Tất cả</button>
+    <button onclick="filterGame('action')">Hành động</button>
+    <button onclick="filterGame('survival')">Sinh tồn</button>
+    <button onclick="filterGame('multiplayer')">Multiplayer</button>
+  </div>
 
-  <section id="skin">
-    <h2>Skin nhân vật</h2>
-    <p>Skin Minecraft yêu thích của tôi:</p>
-    <img src="https://www.planetminecraft.com/files/image/minecraft/skin/2023/1/1/kazuto-skin_1234567.jpg" alt="Skin của kazuti4n">
-  </section>
-
-  <section id="gallery">
-    <h2>Thư viện ảnh công trình</h2>
-    <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2023/01/nha-minecraft-dep-1.jpg" alt="Công trình Minecraft 1">
-    <img src="https://lag.vn/img/news/2020/06/07/minecraft-10-cong-trinh-kien-truc-dep-nhat-the-gioi-khoi-vuong-1_LAG.jpg" alt="Công trình Minecraft 2">
-  </section>
-
-  <section id="blog">
-    <h2>Blog nhật ký chơi game</h2>
-    <div class="blog-entry">
-      <strong>Ngày 1:</strong> Đập gỗ, chế bàn chế tạo, xây nhà tạm bằng đất.
-    </div>
-    <div class="blog-entry">
-      <strong>Ngày 7:</strong> Gặp Creeper đầu tiên, suýt nổ banh nhà 😱
-    </div>
-    <div class="blog-entry">
-      <strong>Ngày 14:</strong> Khám phá Nether, bị Piglin dí chạy té khói.
-    </div>
-  </section>
-
-  <section id="tips">
-    <h2>Mẹo chơi Minecraft</h2>
-    <div class="tip">
-      🔋 <strong>Farm XP nhanh:</strong> Dùng máy farm cá hoặc zombie spawner.
-    </div>
-    <div class="tip">
-      🧱 <strong>Redstone cơ bản:</strong> Dùng piston + lever để tạo cửa bí mật.
-    </div>
-    <div class="tip">
-      🏠 <strong>Nhà chống Creeper:</strong> Dùng đá hoặc obsidian, thắp sáng xung quanh.
-    </div>
-  </section>
-
-  <section id="lienhe">
-    <h2>Liên hệ</h2>
-    <p>📺 Youtube: <strong>kazuti4n</strong></p>
-    <p>💬 Discord: <strong>minhtien6943</strong></p>
-  </section>
-
-  <audio controls autoplay loop>
-    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/C418/Minecraft/C418_-_Minecraft_-_Sweden.mp3" type="audio/mpeg">
-    Trình duyệt của bạn không hỗ trợ phát nhạc.
-  </audio>
+  <div class="game-list" id="gameList">
+    <!-- Game items sẽ được thêm bằng JavaScript -->
+  </div>
 
   <footer>
-    &copy; 2025 kazuti4n | Được xây dựng bằng GitHub Pages & tình yêu Minecraft 💚
+    © 2025 GameIO.vn | Liên hệ: admin@gameio.vn
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
